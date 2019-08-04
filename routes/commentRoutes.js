@@ -15,4 +15,13 @@ router.post("/addComment", (req, res) => {
     });
 });
 
+router.get("/getUserComments", (req, res) => {
+  const { userId } = req.body;
+  new Comment({ userId: userId })
+    .fetch({ withRelated: ["user"] })
+    .then(comments => {
+      res.status(200).json({ comments: comments });
+    });
+});
+
 module.exports = router;

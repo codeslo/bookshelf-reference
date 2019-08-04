@@ -3,7 +3,7 @@ const options = {
   connection: {
     host: "localhost",
     user: "matt",
-    password: "carmelita7705",
+    password: "lame_password",
     database: "bookshelf_test_db"
   }
 };

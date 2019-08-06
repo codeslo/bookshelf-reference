@@ -55,7 +55,7 @@ const Post = bookshelf.Model.extend({
 
 #### Other Modules
 
-The only other modules in this application are Express (to create a web server) Body-Parser (for access to the request object) and Morgan (for logging requests.)
+The only other modules in this application are Express (to create a web server), Body-Parser (for access to the request object), Nodemon (for auto-refreshing the webpage), and Morgan (for logging requests.)
 
 #### To Connect to your local database
 

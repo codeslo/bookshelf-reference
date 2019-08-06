@@ -1,7 +1,7 @@
 ## Bookshelf.js Reference
 
 <br>
-This is a sample application meant to be used as a reference for creating Bookshelf.js methods. I've used a minimal number of libraies to help isolate those necessary for using Bookshelf as an ORM.
+This is a sample application meant to be used as a reference for creating Bookshelf.js methods. I've used a minimal number of libraries to help isolate those necessary for using Bookshelf as an ORM.
 
 Bookshelf.js and Knex.js are both modern JavaScript libraries so some knowledge of ES6 syntax (arrow functions, destucturing) is assumed in this reference.
 

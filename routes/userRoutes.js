@@ -19,21 +19,12 @@ router.post("/addUser", async (req, res, next) => {
 
 //GET USER BY NAME
 router.get("/getUser", async (req, res, next) => {
+  // destructure from req.body
   const { firstName, lastName } = req.body;
-  try {
-    const userData = await User.where({
-      userFirstName: firstName,
-      userLastName: lastName
-    }).fetch();
-    if (userData) {
-      res.status(200).json({ user: userData });
-    } else {
-      res.status(200).send("no user found");
-    }
-  } catch (err) {
-    console.log("getUser error: ", err);
-    res.status(500).send("whoops, server error");
-  }
+  new User({ userFirstName: firstName, userLastName: lastName })
+    .fetch()
+    .then(user => res.status(200).json({ user: user }))
+    .catch(err => console.log("getUser error: ", err));
 });
 
 // GET ALL USERS

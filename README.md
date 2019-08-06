@@ -63,7 +63,7 @@ Edit the connection details in **data/connection.js**
 
 #### To Test the Endpoints
 
-Use Postman (or similar) to query the endpoints. Parameters should be provided in the body as x-www-form-urlencoded data.
+Use Postman (or similar) to query the endpoints. Parameters should be provided in the body as x-www-form-urlencoded data. To start the application just run **npm start**. Note: be sure to run **npm install** before the first use.
 
 #### Bookshelf Basics
 

@@ -1,9 +1,12 @@
-##Bookshelf.js Reference
+## Bookshelf.js Reference
+
 <br>
 This is a sample application meant to be used as a reference for creating Bookshelf.js methods. I've used a minimal number of libraies to help isolate those necessary for using Bookshelf as an ORM.
 
 Bookshelf.js and Knex.js are both modern JavaScript libraries so some knowledge of ES6 syntax (arrow functions, destucturing) is assumed in this reference.
-####Dependencies
+
+#### Dependencies
+
 Bookshelf.js depends on the Knex query builder. The Bookshelf plugin Registry is also necessary for avoiding circular references in models. MySQL is used for connecting to the database.
 
 The pattern I used in this reference was to add all references to dependencies in a single file.
@@ -49,22 +52,36 @@ const Post = bookshelf.Model.extend({
 ```
 
 **TODO: Create seed data for database**
-####Other Modules
+
+#### Other Modules
+
 The only other modules in this application are Express (to create a web server) Body-Parser (for access to the request object) and Morgan (for logging requests.)
-####To Connect to your local database
+
+#### To Connect to your local database
+
 Edit the connection details in **data/connection.js**
-####To Test the Endpoints
+
+#### To Test the Endpoints
+
 Use Postman (or similar) to query the endpoints. Parameters should be provided in the body as x-www-form-urlencoded data.
-####Bookshelf Basics
+
+#### Bookshelf Basics
+
 Bookshelf.js is an Object Relational Mapper that can make querying an application's database easier. Tables can be converted to Bookshelf models very quickly and relationships (one-to-many, one-to-one, etc) can be established in the models themselves, making joined queries easier to write and read.
-####Bookshelf and Knex
+
+#### Bookshelf and Knex
+
 Since bookshelf is built on Knex, Knex queries can be written right into Bookshelf functions. However, this is not necessary for most common CRUD operations.
 **Bookshelf queries return JavaScript Promises.**
-####More about Bookshelf and Knex
+
+#### More about Bookshelf and Knex
+
 [Bookshelf API Reference]('https://bookshelfjs.org/api.html')
 [Knex Tutorial]('https://bookshelfjs.org/api.html')
 [Knex Cheatsheat]('https://devhints.io/knex')
-####Knex Model Examples
+
+#### Knex Model Examples
+
 _/models/user_
 _/models/post_
 _/models/comment_

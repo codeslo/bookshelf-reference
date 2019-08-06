@@ -104,7 +104,9 @@ This also example shows the one-to-many relationship between a user and posts ma
 
 This join can then be 'activated' with a 'withRelated' parameter in a bookshelf query. See below.
 Note: Not all Bookshelf models have join methods. They are convenient but optional.
-####GET Routes
+
+#### GET Routes
+
 **SELECT row FROM table WHERE field = 'foo'**
 
 _/routes/userRoutes/getUser_
@@ -156,13 +158,15 @@ router.get("/getPostWithComments", (req, res) => {
 });
 ```
 
-####POST Routes
+#### POST Routes
+
 **INSERT into table**
 _/routes/userRoutes/addUser_
 _/routes/postRoutes/addPost_
 _/routes/commentRoutes/addComment_
 
-####UPDATE Routes
+#### UPDATE Routes
+
 _/routes/postRoutes/updatePost_
 \*\*Note: both the where clause and the 'patch' object are necessary for updating existing data.
 
@@ -178,7 +182,8 @@ router.put("/updatePost", (req, res) => {
 });
 ```
 
-####DELETE Routes
+#### DELETE Routes
+
 _/routes/postRoutes/deletePost_
 
 \*\*Note: In this example, posts have a foreign key relationship with comments and so can't be deleted in one step. First, all comments associated with the post must be deleted, and then the post is deleted.
@@ -198,7 +203,8 @@ router.delete("/deletePost", (req, res) => {
 });
 ```
 
-####Routes that rely on helper functions
+#### Routes that rely on helper functions
+
 _/routes/postRoutes/getStats_
 \*/utilityMethods/getStats
 

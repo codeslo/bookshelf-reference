@@ -10,6 +10,7 @@ Bookshelf.js and Knex.js are both modern JavaScript libraries so some knowledge 
 Bookshelf.js depends on the Knex query builder. The Bookshelf plugin Registry is also necessary for avoiding circular references in models. MySQL is used for connecting to the database.
 
 The pattern I used in this reference was to add all references to dependencies in a single file.
+
 _/data/connection.js_
 
 ```javascript
@@ -32,7 +33,7 @@ module.exports = bookshelf;
 
 The data connection is then simply imported as 'bookshelf' elsewhere in the application.
 
-Note: The registry plugin is subtle. The only way to see it is in use other than in the connection file is that model files reference other model files as strings rather than variables.
+**Note: The registry plugin is subtle. The only way to see it is in use other than in the connection file is that model files reference other model files as strings rather than variables.**
 
 _Example from models/post_
 
@@ -59,7 +60,7 @@ The only other modules in this application are Express (to create a web server),
 
 #### To Connect to your local database
 
-Edit the connection details in **data/connection.js**
+Edit the connection details in _data/connection.js_
 
 #### To Test the Endpoints
 
@@ -210,6 +211,8 @@ _/routes/postRoutes/getStats_
 _/utilityMethods/getStats_
 
 The getStats endpoint gets a count of all rows in all tables. This data is provided by the utilityMethods/getStats.js function. The best way to utilize helper methods that access the database is with an async function. Async functions always return a promise, which keeps usage consistent with the way Bookshelf and Knex work.
+
+**Note: the getStats method also serves as an example of using a Knex query in Bookshelf. In this case, it is easier to get a count of the objects in a colletion in Knex than it is in Bookshelf.**
 
 _getStats.js_
 

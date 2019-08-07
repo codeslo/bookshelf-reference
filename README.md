@@ -145,7 +145,7 @@ Here we can see how the **withRelated** parameter is passed to the model. Note: 
 **Multiple joins**
 _routes/postRoutes/getPostWithComments_
 
-\*\*Note: To understand joins in Bookshelf it is important to look at both the route and the models in question.
+**Note: To understand joins in Bookshelf it is important to look at both the route and the models in question.**
 
 Basically, multiple joins are created simply by passing multiple defined relationships back to the model. This query works because Post has a defined relationship with both the User and Comment models.
 
@@ -168,7 +168,8 @@ _/routes/commentRoutes/addComment_
 #### UPDATE Routes
 
 _/routes/postRoutes/updatePost_
-\*\*Note: both the where clause and the 'patch' object are necessary for updating existing data.
+
+**Note: both the where clause and the 'patch' object are necessary for updating existing data.**
 
 ```javascript
 router.put("/updatePost", (req, res) => {
@@ -186,7 +187,7 @@ router.put("/updatePost", (req, res) => {
 
 _/routes/postRoutes/deletePost_
 
-\*\*Note: In this example, posts have a foreign key relationship with comments and so can't be deleted in one step. First, all comments associated with the post must be deleted, and then the post is deleted.
+**Note: In this example, posts have a foreign key relationship with comments and so can't be deleted in one step. First, all comments associated with the post must be deleted, and then the post is deleted.**
 
 ```javascript
 router.delete("/deletePost", (req, res) => {
@@ -206,11 +207,11 @@ router.delete("/deletePost", (req, res) => {
 #### Routes that rely on helper functions
 
 _/routes/postRoutes/getStats_
-\*/utilityMethods/getStats
+_/utilityMethods/getStats_
 
 The getStats endpoint gets a count of all rows in all tables. This data is provided by the utilityMethods/getStats.js function. The best way to utilize helper methods that access the database is with an async function. Async functions always return a promise, which keeps usage consistent with the way Bookshelf and Knex work.
 
-\*getStats.js\*\*
+_getStats.js_
 
 ```javascript
 module.exports = async function() {

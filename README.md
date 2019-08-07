@@ -1,7 +1,7 @@
 ## Bookshelf.js Reference
 
 <br>
-This is a sample application meant to be used as a reference for creating Bookshelf.js methods. I've used a minimal number of libraies to help isolate those necessary for using Bookshelf as an ORM.
+This is a sample application meant to be used as a reference for creating Bookshelf.js methods. I've used a minimal number of libraries to help isolate those necessary for using Bookshelf as an ORM.
 
 Bookshelf.js and Knex.js are both modern JavaScript libraries so some knowledge of ES6 syntax (arrow functions, destucturing) is assumed in this reference.
 
@@ -55,7 +55,7 @@ const Post = bookshelf.Model.extend({
 
 #### Other Modules
 
-The only other modules in this application are Express (to create a web server) Body-Parser (for access to the request object) and Morgan (for logging requests.)
+The only other modules in this application are Express (to create a web server), Body-Parser (for access to the request object), Nodemon (for auto-refreshing the webpage), and Morgan (for logging requests.)
 
 #### To Connect to your local database
 
@@ -63,7 +63,7 @@ Edit the connection details in **data/connection.js**
 
 #### To Test the Endpoints
 
-Use Postman (or similar) to query the endpoints. Parameters should be provided in the body as x-www-form-urlencoded data.
+Use Postman (or similar) to query the endpoints. Parameters should be provided in the body as x-www-form-urlencoded data. To start the application just run **npm start**. Note: be sure to run **npm install** before the first use.
 
 #### Bookshelf Basics
 

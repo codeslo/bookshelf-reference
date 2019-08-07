@@ -101,7 +101,7 @@ const User = bookshelf.Model.extend({
 
 Bookshelf objects automatically have access to all the rows in their corresponding table ('tableName') and these rows can be accessed as properties via dot notaiton.
 
-This also example shows the one-to-many relationship between a user and posts made by the user. This is basically a stored join. "Post" is the model that can be joined in a query, the first "userId" referers to the foreign key in posts and the second "userId" referes to the corresponding row in the foreign table.
+This also example shows the one-to-many relationship between a user and posts made by the user. This is basically a stored join. "Post" is the model that can be joined in a query, the first "userId" referers to the foreign key in posts and the second "userId" referes to the corresponding column in the target table.
 
 This join can then be 'activated' with a 'withRelated' parameter in a bookshelf query. See below.
 Note: Not all Bookshelf models have join methods. They are convenient but optional.
